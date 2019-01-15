@@ -16,6 +16,9 @@ function greeting(name) {
 //Name it newGreeting.
 
 //Code Here
+let newGreeting = function (name) {
+  return `Hello, ${name}`;
+}
 
 //////////////////PROBLEM 3////////////////////
 
@@ -23,6 +26,7 @@ function greeting(name) {
 //Name it finalGreeting.
 
 //Code Here
+let finalGreeting = (name) => `Hello, ${name}`;
 
 //////////////////PROBLEM 4////////////////////
 
@@ -30,6 +34,7 @@ function greeting(name) {
 //"apples", "milk", "eggs", "bread"
 
 //Code Here
+let groceries = ["apples", "milk", "eggs", "bread"];
 
 //Write a function called doubleCheck that takes in an array
 //as a parameter.
@@ -38,7 +43,12 @@ function greeting(name) {
 //doubleCheck should return the array.
 
 //Code Here
-
+function doubleCheck(arr) {
+  if(!(arr.includes("chocolate"))) {
+    arr.push('chocolate');
+    return arr;
+  }  
+}
 //////////////////PROBLEM 5////////////////////
 
 //Create an object saved to the variable dog.
@@ -47,21 +57,29 @@ function greeting(name) {
 //and goodBoy (a boolean).
 
 //Code Here
+let dog = {
+  name: "Harry",
+  color: "White",
+  age: 4,
+  goodBoy: true
+};
 
 //...access the dog's name from the object and assign it to a
 //variable called devMountainClassPet.
 
 //Code Here
+let devMountainClassPet = dog.name;
 
 //Add a method to dog called bark.
 //The value of bark should be a function that returns the string "Woof woof".
 
 //Code Here
+dog.bark = () => "Woof woof";
 
 //Store the result of invoking the bark method in a variable called ruff.
 
 //Code Here
-
+let ruff = dog.bark();
 //////////////////PROBLEM 6////////////////////
 
 //Write a function called looper that takes in an array. looper should declare
