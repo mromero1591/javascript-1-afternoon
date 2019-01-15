@@ -93,6 +93,17 @@ let ruff = dog.bark();
 
 //Code Here
 
+function looper(arr) {
+  //initalize sum to 0.
+  let sum = 0;
+  arr.forEach(number => {
+    if((number % 2 === 1) || (number >=100))
+      sum += number;
+  });
+
+  return sum;
+}
+
 //////////////////PROBLEM 7////////////////////
 
 //Given the following function called math
@@ -105,11 +116,15 @@ function math(num1, num2, callback) {
 //returns the result of adding them together.
 
 //Code Here
+function add(a,b) {
+  return a + b;
+} 
 
 //Now invoke math, passing in the numbers 3 and 4, and your add function,
 //storing the result in the variable mathSum.
 
 //Code Here
+let mathSum = math(3,4,add);
 
 //////////////////PROBLEM 8////////////////////
 
@@ -125,7 +140,9 @@ function sampleCallbackTwo() {
 }
 
 //Code Here
-
+function invoker(callback) {
+  return callback();
+}
 //////////////////PROBLEM 9////////////////////
 
 let duck = "cute";
@@ -148,16 +165,16 @@ function pond() {
 //as strings.
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+let globalScope = ["duck"];
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+let bathroomScope = ["duck","rubberDuck"];
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+let bathtubScope = ["duck", "sailorDuck", "rubberDuck"];
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+let pondScope = ["duck", "realDuck"];
 
 //////////////////PROBLEM 10////////////////////
 
@@ -165,11 +182,15 @@ let pondScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
 //function which returns your name.
 
 //Code Here
-
+function outerFn() {
+  return () => "Mark";
+}
 //Now save the result of invoking outerFn into a variable called innerFn.
 
 //Code Here
+let innerFn = outerFn();
 
 //Now invoke innerFn and save the result to a variable called finalResult.
 
 //Code Here
+let finalResult = innerFn();
